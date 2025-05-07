@@ -36,7 +36,7 @@ This is a supervised classification problem, where the target variable is `Thyro
 | Thyroid_Cancer_Risk  | Categorical (target)| Risk level: low, medium, high                             |
 | Diagnosis            | Categorical         | Final diagnosis (benign or malignant)                     |
 
-> ℹ️ The column `Diagnosis` was dropped during preprocessing to prevent data leakage, as it directly overlaps with or follows the target variable.
+> ℹ️ The column `Diagnosis` was dropped to prevent data leakage, as it directly overlaps with or follows the target variable.
 
 ## 🧪 Proposed Solution Methods
 We implemented and compared the following supervised machine learning models:
@@ -59,10 +59,12 @@ We implemented and compared the following supervised machine learning models:
 - Correlation heatmaps
 - Feature distributions
 
-### Model Training
+### Data Analysis
+- Features Importance Analysis
+- Deleting less important features
+
+### Model Training & Evaluation
 - Split data into train/test sets (80/20)
 - Trained Logistic Regression and Random Forest models
-
-### Model Evaluation
 - Used accuracy, precision, recall, F1-score
 - Confusion matrices
